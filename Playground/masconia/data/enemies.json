@@ -1,0 +1,522 @@
+{
+  "crypt": {
+    "palette": [
+      "#1a1a2e",
+      "#16213e",
+      "#0f3460",
+      "#e94560",
+      "#533483",
+      "#8b9a46",
+      "#4a4e69",
+      "#9a8c98"
+    ],
+    "enemies": [
+      {
+        "id": "skeleton",
+        "name": "Esqueleto",
+        "cr": 0.25,
+        "hp": 15,
+        "ac": 13,
+        "stats": {
+          "str": 10,
+          "dex": 14,
+          "con": 10,
+          "int": 6,
+          "wis": 8,
+          "cha": 5
+        },
+        "attacks": [
+          {
+            "name": "Espada de Ossos",
+            "hit_bonus": 2,
+            "damage": "1d6+1",
+            "damage_type": "slashing"
+          }
+        ],
+        "ai": "melee_aggressive",
+        "resistances": [
+          "piercing",
+          "slashing"
+        ],
+        "weaknesses": [
+          "bludgeoning",
+          "radiant"
+        ],
+        "sprite": "skeleton_32.png"
+      },
+      {
+        "id": "zombie",
+        "name": "Zumbi",
+        "cr": 0.5,
+        "hp": 25,
+        "ac": 8,
+        "stats": {
+          "str": 14,
+          "dex": 6,
+          "con": 14,
+          "int": 3,
+          "wis": 6,
+          "cha": 5
+        },
+        "attacks": [
+          {
+            "name": "Garra Podre",
+            "hit_bonus": 1,
+            "damage": "1d6+2",
+            "damage_type": "slashing"
+          }
+        ],
+        "ai": "melee_slow",
+        "resistances": [
+          "necrotic"
+        ],
+        "weaknesses": [
+          "radiant",
+          "fire"
+        ],
+        "sprite": "zombie_32.png"
+      },
+      {
+        "id": "wraith",
+        "name": "Aparição",
+        "cr": 2,
+        "hp": 35,
+        "ac": 15,
+        "stats": {
+          "str": 6,
+          "dex": 16,
+          "con": 10,
+          "int": 12,
+          "wis": 14,
+          "cha": 16
+        },
+        "attacks": [
+          {
+            "name": "Toque de Vida",
+            "hit_bonus": 4,
+            "damage": "2d6",
+            "damage_type": "necrotic"
+          }
+        ],
+        "ai": "hit_and_run",
+        "resistances": [
+          "necrotic",
+          "cold"
+        ],
+        "weaknesses": [
+          "radiant",
+          "force"
+        ],
+        "sprite": "wraith_32.png"
+      }
+    ],
+    "mini_boss": {
+      "id": "lich_knight",
+      "name": "Cavaleiro Lich",
+      "cr": 4,
+      "hp": 60,
+      "ac": 18,
+      "stats": {
+        "str": 16,
+        "dex": 12,
+        "con": 14,
+        "int": 14,
+        "wis": 12,
+        "cha": 16
+      },
+      "attacks": [
+        {
+          "name": "Lâmina Profana",
+          "hit_bonus": 6,
+          "damage": "2d8+3",
+          "damage_type": "slashing"
+        },
+        {
+          "name": "Toque de Morte",
+          "hit_bonus": 5,
+          "damage": "3d6",
+          "damage_type": "necrotic"
+        }
+      ],
+      "ai": "boss_phases",
+      "phases": [
+        {
+          "hp_threshold": 1.0,
+          "behavior": "aggressive_melee",
+          "ability": "summon_skeleton"
+        },
+        {
+          "hp_threshold": 0.5,
+          "behavior": "defensive",
+          "ability": "necrotic_aura"
+        }
+      ],
+      "resistances": [
+        "necrotic",
+        "cold",
+        "poison"
+      ],
+      "weaknesses": [
+        "radiant",
+        "bludgeoning"
+      ],
+      "sprite": "lich_knight_32.png"
+    }
+  },
+  "crystal_caverns": {
+    "palette": [
+      "#0b132b",
+      "#1c2541",
+      "#3a506b",
+      "#5bc0be",
+      "#6fffe9",
+      "#c8e6c9",
+      "#a8d5e5",
+      "#ffffff"
+    ],
+    "enemies": [
+      {
+        "id": "crystal_slug",
+        "name": "Lesma de Cristal",
+        "cr": 0.5,
+        "hp": 20,
+        "ac": 14,
+        "stats": {
+          "str": 12,
+          "dex": 8,
+          "con": 16,
+          "int": 2,
+          "wis": 6,
+          "cha": 4
+        },
+        "attacks": [
+          {
+            "name": "Ácido Cristalino",
+            "hit_bonus": 3,
+            "damage": "1d8+2",
+            "damage_type": "acid"
+          }
+        ],
+        "ai": "melee_slow",
+        "resistances": [
+          "piercing",
+          "slashing"
+        ],
+        "weaknesses": [
+          "bludgeoning",
+          "thunder"
+        ],
+        "sprite": "crystal_slug_32.png"
+      },
+      {
+        "id": "gem_bat",
+        "name": "Morcego de Gema",
+        "cr": 0.25,
+        "hp": 10,
+        "ac": 15,
+        "stats": {
+          "str": 6,
+          "dex": 16,
+          "con": 8,
+          "int": 2,
+          "wis": 12,
+          "cha": 6
+        },
+        "attacks": [
+          {
+            "name": "Mordida Cortante",
+            "hit_bonus": 4,
+            "damage": "1d4+2",
+            "damage_type": "piercing"
+          }
+        ],
+        "ai": "hit_and_run",
+        "resistances": [
+          "cold"
+        ],
+        "weaknesses": [
+          "fire",
+          "thunder"
+        ],
+        "sprite": "gem_bat_32.png"
+      },
+      {
+        "id": "crystal_golem",
+        "name": "Golem de Cristal",
+        "cr": 3,
+        "hp": 55,
+        "ac": 17,
+        "stats": {
+          "str": 18,
+          "dex": 8,
+          "con": 18,
+          "int": 6,
+          "wis": 10,
+          "cha": 6
+        },
+        "attacks": [
+          {
+            "name": "Punho de Cristal",
+            "hit_bonus": 6,
+            "damage": "2d8+4",
+            "damage_type": "bludgeoning"
+          }
+        ],
+        "ai": "melee_aggressive",
+        "resistances": [
+          "piercing",
+          "slashing",
+          "cold"
+        ],
+        "weaknesses": [
+          "thunder",
+          "force"
+        ],
+        "sprite": "crystal_golem_32.png"
+      }
+    ],
+    "mini_boss": {
+      "id": "prism_warden",
+      "name": "Guardião do Prisma",
+      "cr": 5,
+      "hp": 75,
+      "ac": 19,
+      "stats": {
+        "str": 14,
+        "dex": 16,
+        "con": 14,
+        "int": 18,
+        "wis": 14,
+        "cha": 16
+      },
+      "attacks": [
+        {
+          "name": "Raio Prismático",
+          "hit_bonus": 7,
+          "damage": "3d8",
+          "damage_type": "force"
+        },
+        {
+          "name": "Fragmento Cortante",
+          "hit_bonus": 6,
+          "damage": "2d6+3",
+          "damage_type": "slashing"
+        }
+      ],
+      "ai": "boss_phases",
+      "phases": [
+        {
+          "hp_threshold": 1.0,
+          "behavior": "ranged",
+          "ability": "prismatic_beam"
+        },
+        {
+          "hp_threshold": 0.6,
+          "behavior": "summoner",
+          "ability": "crystal_spawn"
+        },
+        {
+          "hp_threshold": 0.3,
+          "behavior": "desperate",
+          "ability": "self_destruct"
+        }
+      ],
+      "resistances": [
+        "force",
+        "cold",
+        "radiant"
+      ],
+      "weaknesses": [
+        "thunder",
+        "necrotic"
+      ],
+      "sprite": "prism_warden_32.png"
+    }
+  },
+  "dragon_lair": {
+    "palette": [
+      "#2d0000",
+      "#4a0000",
+      "#8b0000",
+      "#ff4500",
+      "#ffd700",
+      "#1a1a1a",
+      "#4a3728",
+      "#ff6347"
+    ],
+    "enemies": [
+      {
+        "id": "kobold",
+        "name": "Kobold",
+        "cr": 0.125,
+        "hp": 8,
+        "ac": 12,
+        "stats": {
+          "str": 8,
+          "dex": 14,
+          "con": 10,
+          "int": 8,
+          "wis": 7,
+          "cha": 8
+        },
+        "attacks": [
+          {
+            "name": "Lança Enferrujada",
+            "hit_bonus": 2,
+            "damage": "1d6",
+            "damage_type": "piercing"
+          }
+        ],
+        "ai": "swarm",
+        "resistances": [
+          "fire"
+        ],
+        "weaknesses": [
+          "cold",
+          "piercing"
+        ],
+        "sprite": "kobold_32.png"
+      },
+      {
+        "id": "drake",
+        "name": "Drake Jovem",
+        "cr": 2,
+        "hp": 40,
+        "ac": 16,
+        "stats": {
+          "str": 16,
+          "dex": 12,
+          "con": 14,
+          "int": 8,
+          "wis": 12,
+          "cha": 10
+        },
+        "attacks": [
+          {
+            "name": "Mordida",
+            "hit_bonus": 5,
+            "damage": "2d6+3",
+            "damage_type": "piercing"
+          },
+          {
+            "name": "Sopro de Fogo",
+            "hit_bonus": 4,
+            "damage": "3d6",
+            "damage_type": "fire"
+          }
+        ],
+        "ai": "melee_aggressive",
+        "resistances": [
+          "fire",
+          "slashing"
+        ],
+        "weaknesses": [
+          "cold",
+          "piercing"
+        ],
+        "sprite": "drake_32.png"
+      },
+      {
+        "id": "dragon_cultist",
+        "name": "Cultista do Dragão",
+        "cr": 1,
+        "hp": 25,
+        "ac": 14,
+        "stats": {
+          "str": 12,
+          "dex": 12,
+          "con": 12,
+          "int": 14,
+          "wis": 12,
+          "cha": 14
+        },
+        "attacks": [
+          {
+            "name": "Chama Sagrada",
+            "hit_bonus": 4,
+            "damage": "2d6",
+            "damage_type": "fire"
+          }
+        ],
+        "ai": "ranged_support",
+        "resistances": [
+          "fire"
+        ],
+        "weaknesses": [
+          "cold",
+          "radiant"
+        ],
+        "sprite": "cultist_32.png"
+      }
+    ],
+    "boss": {
+      "id": "wyrm_ancient",
+      "name": "Wyrm, o Dragão Ancião",
+      "cr": 10,
+      "hp": 200,
+      "ac": 20,
+      "stats": {
+        "str": 22,
+        "dex": 14,
+        "con": 20,
+        "int": 18,
+        "wis": 16,
+        "cha": 20
+      },
+      "attacks": [
+        {
+          "name": "Garras Titânicas",
+          "hit_bonus": 10,
+          "damage": "3d8+6",
+          "damage_type": "slashing"
+        },
+        {
+          "name": "Sopro Infernal",
+          "hit_bonus": 8,
+          "damage": "8d6",
+          "damage_type": "fire"
+        },
+        {
+          "name": "Cauda Esmagadora",
+          "hit_bonus": 9,
+          "damage": "2d10+6",
+          "damage_type": "bludgeoning"
+        }
+      ],
+      "ai": "boss_phases",
+      "phases": [
+        {
+          "hp_threshold": 1.0,
+          "behavior": "proud",
+          "ability": "fire_breath"
+        },
+        {
+          "hp_threshold": 0.7,
+          "behavior": "aggressive",
+          "ability": "tail_sweep"
+        },
+        {
+          "hp_threshold": 0.4,
+          "behavior": "flying",
+          "ability": "aerial_bombardment"
+        },
+        {
+          "hp_threshold": 0.15,
+          "behavior": "desperate",
+          "ability": "inferno_rage"
+        }
+      ],
+      "resistances": [
+        "fire",
+        "slashing",
+        "piercing",
+        "bludgeoning"
+      ],
+      "weaknesses": [
+        "cold",
+        "radiant"
+      ],
+      "sprite": "wyrm_ancient_32.png"
+    }
+  }
+}

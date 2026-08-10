@@ -1,0 +1,203 @@
+{
+  "weapons": [
+    {
+      "id": "iron_sword",
+      "name": "Espada de Ferro",
+      "type": "weapon",
+      "slot": "main_hand",
+      "damage": "1d8+1",
+      "damage_type": "slashing",
+      "hit_bonus": 0,
+      "rarity": "common",
+      "value": 50
+    },
+    {
+      "id": "dagger",
+      "name": "Adaga",
+      "type": "weapon",
+      "slot": "main_hand",
+      "damage": "1d4+2",
+      "damage_type": "piercing",
+      "hit_bonus": 1,
+      "rarity": "common",
+      "value": 30,
+      "finesse": true
+    },
+    {
+      "id": "apprentice_staff",
+      "name": "Cajado de Aprendiz",
+      "type": "weapon",
+      "slot": "two_hands",
+      "damage": "1d6",
+      "damage_type": "bludgeoning",
+      "hit_bonus": 0,
+      "rarity": "common",
+      "value": 40,
+      "spell_bonus": 1
+    },
+    {
+      "id": "mace",
+      "name": "Maça",
+      "type": "weapon",
+      "slot": "main_hand",
+      "damage": "1d6+1",
+      "damage_type": "bludgeoning",
+      "hit_bonus": 0,
+      "rarity": "common",
+      "value": 35
+    },
+    {
+      "id": "flame_tongue",
+      "name": "Língua de Fogo",
+      "type": "weapon",
+      "slot": "main_hand",
+      "damage": "1d8+2",
+      "damage_type": "slashing",
+      "extra_damage": "1d6",
+      "extra_type": "fire",
+      "hit_bonus": 1,
+      "rarity": "rare",
+      "value": 500
+    },
+    {
+      "id": "frost_bite",
+      "name": "Mordida do Gelo",
+      "type": "weapon",
+      "slot": "main_hand",
+      "damage": "1d8+1",
+      "damage_type": "piercing",
+      "extra_damage": "1d6",
+      "extra_type": "cold",
+      "hit_bonus": 1,
+      "rarity": "rare",
+      "value": 450
+    }
+  ],
+  "armor": [
+    {
+      "id": "leather_armor",
+      "name": "Armadura de Couro",
+      "type": "armor",
+      "slot": "body",
+      "ac_bonus": 1,
+      "rarity": "common",
+      "value": 40
+    },
+    {
+      "id": "chain_mail",
+      "name": "Cota de Malha",
+      "type": "armor",
+      "slot": "body",
+      "ac_bonus": 3,
+      "rarity": "common",
+      "value": 120,
+      "dex_max": 2
+    },
+    {
+      "id": "mage_robe",
+      "name": "Manto do Mago",
+      "type": "armor",
+      "slot": "body",
+      "ac_bonus": 0,
+      "rarity": "common",
+      "value": 30,
+      "spell_bonus": 1
+    },
+    {
+      "id": "hooded_cloak",
+      "name": "Manto Encapuzado",
+      "type": "armor",
+      "slot": "body",
+      "ac_bonus": 1,
+      "rarity": "common",
+      "value": 50,
+      "stealth_bonus": 2
+    },
+    {
+      "id": "dragon_scale_mail",
+      "name": "Malha de Escamas",
+      "type": "armor",
+      "slot": "body",
+      "ac_bonus": 5,
+      "rarity": "legendary",
+      "value": 2000,
+      "resistances": [
+        "fire"
+      ]
+    }
+  ],
+  "shields": [
+    {
+      "id": "wooden_shield",
+      "name": "Escudo de Madeira",
+      "type": "shield",
+      "slot": "off_hand",
+      "ac_bonus": 1,
+      "rarity": "common",
+      "value": 25
+    },
+    {
+      "id": "tower_shield",
+      "name": "Escudo de Torre",
+      "type": "shield",
+      "slot": "off_hand",
+      "ac_bonus": 2,
+      "rarity": "uncommon",
+      "value": 150,
+      "speed_penalty": 1
+    }
+  ],
+  "consumables": [
+    {
+      "id": "health_potion",
+      "name": "Poção de Cura",
+      "type": "consumable",
+      "effect": "heal",
+      "value": "2d8+2",
+      "rarity": "common",
+      "value_gold": 50
+    },
+    {
+      "id": "mana_potion",
+      "name": "Poção de Mana",
+      "type": "consumable",
+      "effect": "restore_mana",
+      "value": "1d10+10",
+      "rarity": "common",
+      "value_gold": 40
+    },
+    {
+      "id": "dragon_soul",
+      "name": "Alma do Dragão",
+      "type": "currency",
+      "rarity": "legendary",
+      "description": "Moeda persistente para desbloqueios entre runs."
+    }
+  ],
+  "relics": [
+    {
+      "id": "broken_dice",
+      "name": "Dado Quebrado",
+      "type": "relic",
+      "rarity": "legendary",
+      "effect": "reroll_once_per_combat",
+      "description": "Uma vez por combate, pode relançar qualquer dado."
+    },
+    {
+      "id": "wyrm_eye",
+      "name": "Olho do Wyrm",
+      "type": "relic",
+      "rarity": "epic",
+      "effect": "true_sight",
+      "description": "Revela inimigos e armadilhas em raio de 5 tiles."
+    },
+    {
+      "id": "phoenix_feather",
+      "name": "Pena da Fênix",
+      "type": "relic",
+      "rarity": "epic",
+      "effect": "revive_once",
+      "description": "Uma vez por run, revive com 50% de HP ao morrer."
+    }
+  ]
+}

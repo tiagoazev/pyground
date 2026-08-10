@@ -1,0 +1,138 @@
+{
+  "warrior": {
+    "name": "Guerreiro",
+    "description": "Mestre das armas e da armadura. Resiste ao dano com corpo e alma.",
+    "base_stats": {
+      "str": 16,
+      "dex": 12,
+      "con": 14,
+      "int": 8,
+      "wis": 10,
+      "cha": 10
+    },
+    "hp_per_level": 10,
+    "starting_equipment": [
+      "iron_sword",
+      "wooden_shield",
+      "leather_armor"
+    ],
+    "abilities": [
+      {
+        "id": "second_wind",
+        "name": "Segundo Fôlego",
+        "description": "Recupera 1d10 + nível de HP uma vez por combate.",
+        "cooldown": 1
+      },
+      {
+        "id": "power_attack",
+        "name": "Ataque Poderoso",
+        "description": "Gasta ação bônus para +2d6 de dano no próximo ataque.",
+        "cooldown": 2
+      }
+    ],
+    "sprite": "warrior_32.png"
+  },
+  "rogue": {
+    "name": "Ladino",
+    "description": "Especialista em furtividade e ataques precisos. Crita com facilidade.",
+    "base_stats": {
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 10,
+      "wis": 12,
+      "cha": 14
+    },
+    "hp_per_level": 8,
+    "starting_equipment": [
+      "dagger",
+      "lockpicks",
+      "hooded_cloak"
+    ],
+    "abilities": [
+      {
+        "id": "sneak_attack",
+        "name": "Ataque Furtivo",
+        "description": "+2d6 de dano se atacar com vantagem ou inimigo adjacente a aliado.",
+        "passive": true
+      },
+      {
+        "id": "dash",
+        "name": "Desengate",
+        "description": "Movimento dobrado e não provoca ataques de oportunidade.",
+        "cooldown": 3
+      }
+    ],
+    "sprite": "rogue_32.png"
+  },
+  "mage": {
+    "name": "Mago",
+    "description": "Manipulador das forças arcanas. Frágil, mas destrutivo.",
+    "base_stats": {
+      "str": 8,
+      "dex": 12,
+      "con": 10,
+      "int": 16,
+      "wis": 14,
+      "cha": 12
+    },
+    "hp_per_level": 6,
+    "starting_equipment": [
+      "apprentice_staff",
+      "spellbook",
+      "mage_robe"
+    ],
+    "abilities": [
+      {
+        "id": "fireball",
+        "name": "Bola de Fogo",
+        "description": "Magia de área: 3d6 de dano de fogo em raio de 2 tiles.",
+        "mana_cost": 15,
+        "cooldown": 3
+      },
+      {
+        "id": "shield",
+        "name": "Escudo Arcano",
+        "description": "+5 CA até o próximo turno. Reação.",
+        "mana_cost": 8,
+        "cooldown": 2
+      }
+    ],
+    "sprite": "mage_32.png"
+  },
+  "cleric": {
+    "name": "Clérigo",
+    "description": "Servo dos deuses antigos. Cura aliados e repele mortos-vivos.",
+    "base_stats": {
+      "str": 12,
+      "dex": 10,
+      "con": 14,
+      "int": 10,
+      "wis": 16,
+      "cha": 12
+    },
+    "hp_per_level": 8,
+    "starting_equipment": [
+      "mace",
+      "holy_symbol",
+      "chain_mail"
+    ],
+    "abilities": [
+      {
+        "id": "heal",
+        "name": "Cura de Ferimentos",
+        "description": "Restaura 2d8 + mod SAB de HP em alvo tocado.",
+        "mana_cost": 10,
+        "cooldown": 2
+      },
+      {
+        "id": "turn_undead",
+        "name": "Repreensão",
+        "description": "Mortos-vivos em raio de 3 tiles devem fugir por 1 turno.",
+        "mana_cost": 12,
+        "cooldown": 4
+      }
+    ],
+    "sprite": "cleric_32.png"
+  }
+}

@@ -1,0 +1,4 @@
+# pygame-ce (community edition) instead of classic pygame: it ships
+# prebuilt wheels for Python 3.14, whereas classic pygame gets compiled
+# from source without SDL_ttf and ends up with no working font module.
+pygame-ce>=2.5
